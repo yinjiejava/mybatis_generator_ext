@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	
+	<context id="dbName" targetRuntime="MyBatis3">
+		<!-- <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.1.4:3306/zeus_db?useUnicode=true&amp;characterEncoding=UTF-8" 
+			userId="brojade" password="0987654321"></jdbcConnection> -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://192.168.129.178:3306/tmoney?characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull"
+			userId="root" password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.tairanchina.md.tcoin.dal.entity"
+			targetProject="export">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.tairanchina.md.tcoin.dal.dao"
+			targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.tairanchina.md.tcoin.dal.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+
+		<!-- 表名称 -->
+		<!-- <table schema="tcoin" tableName="tm_rule">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table schema="tcoin" tableName="tm_event">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table schema="tcoin" tableName="tm_integral_flow">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table schema="tcoin" tableName="tm_integral_info">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+		<table schema="tcoin" tableName="tm_privilege">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table> -->
+		<table schema="tcoin" tableName="tm_privilege">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+
+	</context>
+</generatorConfiguration>
