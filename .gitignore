@@ -1,0 +1,13 @@
+/.idea/
+/target/
+/.settings/
+.classpath
+*.iml
+.project
+/bin/
+/target/
+/target
+/*.epoch
+tmlog.lck
+/*.log
+192.168.5.172.tm0.epoch

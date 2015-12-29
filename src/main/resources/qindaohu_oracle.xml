@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="D:\workspace_hundsun\mybatis_generator\lib\ojdbc6-11g.jar" />
+	<context id="dbName" targetRuntime="MyBatis3">
+
+		<jdbcConnection 
+				driverClass="oracle.jdbc.OracleDriver" 
+				connectionURL="jdbc:oracle:thin:@192.168.16.136:1521:orcl" 
+				userId="qiandh" 
+				password="qiandh">
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		
+		
+		<!-- 便民
+		<javaModelGenerator targetPackage="cn.weyoo.biz.dal.serv.entity" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="cn.weyoo.biz.dal.serv.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER" targetPackage="cn.weyoo.biz.dal.serv.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		
+		<table tableName="SERV_CONV_INFO" domainObjectName="ConvInfo">
+			<generatedKey column="id" sqlStatement="select SERV_CONV_INFO_ID.nextval from dual" />
+		</table>
+		 -->
+		
+		<!-- 景区 	
+		<javaModelGenerator targetPackage="cn.weyoo.biz.dal.scenic.entity" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="cn.weyoo.biz.dal.scenic.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER" targetPackage="cn.weyoo.biz.dal.scenic.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		
+		<table tableName="SCENIC_TICKET" domainObjectName="Ticket">
+			<generatedKey column="id" sqlStatement="select SCENIC_TICKET_ID.nextval from dual" />
+		</table>	
+		-->
+		
+		<!-- order  
+		<javaModelGenerator targetPackage="cn.weyoo.biz.dal.order.entity" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="cn.weyoo.biz.dal.order.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER" targetPackage="cn.weyoo.biz.dal.order.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		
+		<table tableName="order_refund" domainObjectName="OrderRefund">
+			<generatedKey column="id" sqlStatement="select order_refund_id.nextval from dual" />
+		</table>	
+		
+			-->
+	<!-- 
+		<table tableName="order_freight_com" domainObjectName="FreightCom">
+			<generatedKey column="id" sqlStatement="select order_freight_com_id.nextval from dual" />
+		</table>		
+		<table tableName="order_refund" domainObjectName="OrderRefund">
+			<generatedKey column="id" sqlStatement="select order_refund_id.nextval from dual" />
+		</table>		
+		<table tableName="ORDER_DETAIL" domainObjectName="OrderDetail">
+			<generatedKey column="id" sqlStatement="select ORDER_DETAIL_ID.nextval from dual" />
+		</table>		
+			
+		<table tableName="ORDER_VOUCHER" domainObjectName="OrderVoucher">
+			<generatedKey column="id" sqlStatement="select ORDER_VOUCHER_ID.nextval from dual" />
+		</table>
+				
+		<table tableName="ORDER_DETAIL" domainObjectName="OrderDetail">
+			<generatedKey column="id" sqlStatement="select ORDER_DETAIL_ID.nextval from dual" />
+		</table>
+		
+		<table tableName="ORDER_INFO" domainObjectName="OrderInfo">
+			<generatedKey column="id" sqlStatement="select ORDER_INFO_ID.nextval from dual" />
+		</table>
+		
+		<table tableName="order_refund" domainObjectName="OrderRefund">
+			<generatedKey column="id" sqlStatement="select order_refund_id.nextval from dual" />
+		</table>	
+		
+		<table tableName="order_freight_com" domainObjectName="FreightCom">
+			<generatedKey column="id" sqlStatement="select order_freight_com_id.nextval from dual" />
+		</table>	
+		<table tableName="ORDER_CANCEL_LOG" domainObjectName="OrderCancelLog">
+			<generatedKey column="id" sqlStatement="select ORDER_CANCEL_LOG_ID.nextval from dual" />
+		</table>	
+		 -->
+		<!-- 
+		<table tableName="ORDER_INFO" domainObjectName="OrderInfo">
+			<generatedKey column="id" sqlStatement="select ORDER_INFO_ID.nextval from dual" />
+		</table>	
+		 -->
+		<!-- 商品 
+		<javaModelGenerator targetPackage="cn.weyoo.biz.dal.goods.entity" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="cn.weyoo.biz.dal.goods.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER" targetPackage="cn.weyoo.biz.dal.goods.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+ 		<table tableName="GOODS_INFO" domainObjectName="GoodsInfo">
+			<generatedKey column="id" sqlStatement="select GOODS_INFO_ID.nextval from dual" />
+		</table>
+		-->
+		<!-- 
+		<table tableName="GOODS_TYPE" domainObjectName="GoodsType">
+			<generatedKey column="id" sqlStatement="select GOODS_TYPE_ID.nextval from dual" />
+		</table>		
+		 -->
+		
+		
+		<!-- 
+		<javaModelGenerator targetPackage="cn.weyoo.biz.dal.serv.entity" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="cn.weyoo.biz.dal.serv.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER" targetPackage="cn.weyoo.biz.dal.serv.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table tableName="SERV_TRAFFIC_TYPE" domainObjectName="TrafficType">
+			<generatedKey column="id" sqlStatement="select SERV_TRAFFIC_TYPE_ID.nextval from dual" />
+		</table>
+		 -->
+
+		<!-- 评论 -->
+		<!-- <javaModelGenerator targetPackage="cn.weyoo.biz.dal.comment.entity" targetProject="export"> <property name="enableSubPackages" value="true" /> <property name="trimStrings" value="true" /> </javaModelGenerator> <sqlMapGenerator targetPackage="cn.weyoo.biz.dal.comment.dao" targetProject="export"> <property name="enableSubPackages" value="true" /> </sqlMapGenerator> <javaClientGenerator type="XMLMAPPER" targetPackage="cn.weyoo.biz.dal.comment.dao" targetProject="export"> <property name="enableSubPackages" value="true" /> </javaClientGenerator> <table tableName="comment_info" domainObjectName="CommentInfo" > <generatedKey column="id" sqlStatement="select comment_info_id.nextval from dual"/> </table> <table tableName="comment_item_setting" domainObjectName="CommentItemSetting" > <generatedKey column="id" sqlStatement="select comment_item_setting_id.nextval from dual"/> </table> <table tableName="comment_biz_item_ref" domainObjectName="CommentBizItemRef" > <generatedKey column="id" sqlStatement="select 
+			comment_biz_item_ref_id.nextval from dual"/> </table> <table tableName="comment_item_info" domainObjectName="CommentItemInfo" > <generatedKey column="id" sqlStatement="select comment_item_info_id.nextval from dual"/> </table> <table tableName="comment_feedback" domainObjectName="CommentFeedback" > <generatedKey column="id" sqlStatement="select comment_feedback_id.nextval from dual"/> </table> <table tableName="comment_statis_total" domainObjectName="CommentStatisTotal" > <generatedKey column="id" sqlStatement="select comment_statis_total_id.nextval from dual"/> </table> <table tableName="comment_statis_item" domainObjectName="CommentStatisItem" > <generatedKey column="id" sqlStatement="select comment_statis_item_id.nextval from dual"/> </table> -->
+
+
+		<!-- 系统公用  -->
+		<javaModelGenerator targetPackage="cn.weyoo.biz.dal.sys.entity" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		
+		<sqlMapGenerator targetPackage="cn.weyoo.biz.dal.sys.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		
+		<javaClientGenerator type="XMLMAPPER" targetPackage="cn.weyoo.biz.dal.sys.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		
+		<table tableName="sys_dictionary_type" domainObjectName="DictType">
+			<generatedKey column="id" sqlStatement="select sys_dictionary_type_id.nextval from dual" />
+		</table>
+		<table tableName="sys_dictionary_value" domainObjectName="DictValue">
+			<generatedKey column="id" sqlStatement="select sys_dictionary_value_id.nextval from dual" />
+		</table>
+		
+		
+		<!-- 
+		<table tableName="sys_admin_role" domainObjectName="AdminRole">
+			<generatedKey column="id" sqlStatement="select sys_admin_role_id.nextval from dual" />
+		</table>
+		
+		<table tableName="sys_admin_user" domainObjectName="AdminUser"> 
+			<generatedKey column="id" sqlStatement="select sys_admin_user_id.nextval from dual" /> 
+		</table> 
+		
+		<table tableName="sys_resource_img" domainObjectName="ResourceImg"> 
+			<generatedKey column="id" sqlStatement="select sys_resource_img_id.nextval from dual" /> 
+		</table> 
+		
+		<table tableName="sys_area" domainObjectName="Area"> 
+		</table> 
+		
+		<table tableName="sys_biz_area" domainObjectName="BizArea">
+		</table> 
+		
+		<table tableName="sys_city" domainObjectName="City">
+		</table> 
+		
+		<table tableName="sys_province" domainObjectName="Province">
+		</table> <table tableName="sys_resource_img_size" domainObjectName="ResourceImgSize"> <generatedKey column="id" sqlStatement="select sys_resource_img_size_id.nextval from dual" /> </table> -->
+
+
+		<!-- 交通便民信息 <javaModelGenerator targetPackage="cn.weyoo.biz.dal.serv.entity" targetProject="export"> <property name="enableSubPackages" value="true" /> <property name="trimStrings" value="true" /> </javaModelGenerator> <sqlMapGenerator targetPackage="cn.weyoo.biz.dal.serv.dao" targetProject="export"> <property name="enableSubPackages" value="true" /> </sqlMapGenerator> <javaClientGenerator type="XMLMAPPER" targetPackage="cn.weyoo.biz.dal.serv.dao" targetProject="export"> <property name="enableSubPackages" value="true" /> </javaClientGenerator> <table tableName="serv_traffic_type" domainObjectName="TrafficType" > <generatedKey column="id" sqlStatement="select serv_traffic_type_id.nextval from dual"/> </table> <table tableName="serv_traffic_line" domainObjectName="TrafficLine" > <generatedKey column="id" sqlStatement="select serv_traffic_line_id.nextval from dual"/> </table> <table tableName="serv_conv_type" domainObjectName="ConvType" > <generatedKey column="id" sqlStatement="select serv_conv_type_id.nextval 
+			from dual"/> </table> <table tableName="serv_conv_info" domainObjectName="ConvInfo" > <generatedKey column="id" sqlStatement="select serv_conv_info_id.nextval from dual"/> </table> -->
+
+		<!-- 酒店
+		
+		<javaModelGenerator targetPackage="cn.weyoo.biz.dal.hotel.entity" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		
+		<sqlMapGenerator targetPackage="cn.weyoo.biz.dal.hotel.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		
+		<javaClientGenerator type="XMLMAPPER" targetPackage="cn.weyoo.biz.dal.hotel.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		
+		<table tableName="HOTEL_ROOM_RESERVE" domainObjectName="RoomReserve">
+			<generatedKey column="id" sqlStatement="select HOTEL_ROOM_RESERVE_ID.nextval from dual" />
+		</table>		
+		
+		 -->
+		
+		<!-- 
+		
+		<table tableName="HOTEL_INFO" domainObjectName="HotelInfo">
+			<generatedKey column="id" sqlStatement="select hotel_info_id.nextval from dual" />
+		</table>
+		
+		<table tableName="HOTEL_ROOM_TYPE" domainObjectName="RoomType">
+			<generatedKey column="id" sqlStatement="select hotel_room_type_id.nextval from dual" />
+		</table> 
+		
+		<table tableName="hotel_brand" domainObjectName="Brand">
+			<generatedKey column="id" sqlStatement="select hotel_brand_id.nextval from dual" />
+		</table>
+		<table tableName="hotel_brand_city_ref" domainObjectName="BrandCityRef">
+			<generatedKey column="id" sqlStatement="select hotel_brand_city_ref_id.nextval from dual" />
+		</table>
+	 -->
+	 <!-- 
+	<javaModelGenerator targetPackage="cn.weyoo.biz.dal.mem.entity"
+		targetProject="export">
+		<property name="enableSubPackages" value="true" />
+		<property name="trimStrings" value="true" />
+	</javaModelGenerator>
+	<sqlMapGenerator targetPackage="cn.weyoo.biz.dal.mem.dao"
+		targetProject="export">
+		<property name="enableSubPackages" value="true" />
+	</sqlMapGenerator>
+	<javaClientGenerator type="XMLMAPPER"
+		targetPackage="cn.weyoo.biz.dal.mem.dao" targetProject="export">
+		<property name="enableSubPackages" value="true" />
+	</javaClientGenerator>
+	
+	<table tableName="mem_contact" domainObjectName="MemContact">
+		<generatedKey column="id" sqlStatement="select mem_contact_id.nextval from dual" />
+	</table>
+	  -->
+		<!-- 用户、商家 
+		<javaModelGenerator targetPackage="cn.weyoo.biz.dal.mem.entity"
+			targetProject="export">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="cn.weyoo.biz.dal.mem.dao"
+			targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="cn.weyoo.biz.dal.mem.dao" targetProject="export">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		
+		<table tableName="mem_info" domainObjectName="MemInfo">
+			<generatedKey column="id"
+				sqlStatement="select mem_info_id.nextval from dual" />
+		</table>
+		-->
+		
+		<!-- <table tableName="mem_provider_field" domainObjectName="ProviderField" > <generatedKey column="id" sqlStatement="select mem_provider_field_id.nextval from dual"/> </table> <table tableName="mem_provider_model_field_ref" domainObjectName="ProviderModelFieldRef" > <generatedKey column="id" sqlStatement="select mem_model_field_ref_id.nextval from dual"/> </table> <table tableName="mem_extend" domainObjectName="MemExtend" > <generatedKey column="id" sqlStatement="select mem_extend_id.nextval from dual"/> </table> <table tableName="mem_third_login" domainObjectName="MemThirdLogin" > <generatedKey column="id" sqlStatement="select mem_third_login_id.nextval from dual"/> </table> <table tableName="mem_provider_type" domainObjectName="ProviderType" > <generatedKey column="id" sqlStatement="select mem_provider_type_id.nextval from dual"/> </table> <table tableName="mem_provider" domainObjectName="Provider" > <generatedKey column="id" sqlStatement="select mem_provider_id.nextval from dual"/> 
+			</table> <table tableName="mem_provider_apporve" domainObjectName="ProviderApporve" > <generatedKey column="id" sqlStatement="select mem_provider_apporve_id.nextval from dual"/> </table> <table tableName="mem_fav" domainObjectName="MemFav" > <generatedKey column="id" sqlStatement="select mem_fav_id.nextval from dual"/> </table> <table tableName="mem_contact" domainObjectName="MemContact" > <generatedKey column="id" sqlStatement="select mem_contact_id.nextval from dual"/> </table> <table tableName="mem_album" domainObjectName="MemAlbum" > <generatedKey column="id" sqlStatement="select mem_album_id.nextval from dual"/> </table> <table tableName="mem_photo" domainObjectName="MemPhoto" > <generatedKey column="id" sqlStatement="select mem_photo_id.nextval from dual"/> </table> <table tableName="mem_provider_model" domainObjectName="ProviderModel" > <generatedKey column="id" sqlStatement="select mem_provider_model_id.nextval from dual"/> </table> -->
+
+	</context>
+</generatorConfiguration>
