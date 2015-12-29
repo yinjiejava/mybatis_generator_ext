@@ -17,7 +17,6 @@ package org.mybatis.generator.codegen.mybatis3.javamapper.elements;
 
 import static org.mybatis.generator.internal.util.messages.Messages.getString;
 
-import java.io.IOException;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -82,41 +81,41 @@ public class SelectByExampleWithoutBLOBsMethodGenerator extends
             interfaze.addMethod(method);
             
             //test
-            try
-            {
-                //构造导入语句
-                FullyQualifiedJavaType fqjt = new FullyQualifiedJavaType("com.tairanchina.PageRequest");
-                importedTypes.add(fqjt);
-                
-                //构造分页方法
-                Method extMethod = deepCopyMethod(method);
-                FullyQualifiedJavaType pageRequestType = new FullyQualifiedJavaType("com.tairanchina.PageRequest");
-                extMethod.addParameter(new Parameter(pageRequestType, "pageRequest")); //增加分页参数
-                
-                //增加到interfaze(就是即将要解析对象)
-                interfaze.addImportedTypes(importedTypes);
-                interfaze.addMethod(extMethod);
-            }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-            }
+//            try
+//            {
+//                //构造导入语句
+//                FullyQualifiedJavaType fqjt = new FullyQualifiedJavaType("com.tairanchina.PageRequest");
+//                importedTypes.add(fqjt);
+//                
+//                //构造分页方法
+//                Method extMethod = deepCopyMethod(method);
+//                FullyQualifiedJavaType pageRequestType = new FullyQualifiedJavaType("com.tairanchina.PageRequest");
+//                extMethod.addParameter(new Parameter(pageRequestType, "pageRequest")); //增加分页参数
+//                
+//                //增加到interfaze(就是即将要解析对象)
+//                interfaze.addImportedTypes(importedTypes);
+//                interfaze.addMethod(extMethod);
+//            }
+//            catch (Exception e)
+//            {
+//                e.printStackTrace();
+//            }
         }
     }
-    
-    private Method deepCopyMethod(Method method) throws IOException, ClassNotFoundException
-    {
-        Method out = new Method();
-        out.setVisibility(JavaVisibility.PUBLIC);
-        out.setReturnType(method.getReturnType());
-        out.setName(method.getName());
-        for(Parameter parameter : method.getParameters())
-        {
-            out.addParameter(parameter); //$NON-NLS-1$    
-        }
-        
-        return out;  
-    }
+//    
+//    private Method deepCopyMethod(Method method) throws IOException, ClassNotFoundException
+//    {
+//        Method out = new Method();
+//        out.setVisibility(JavaVisibility.PUBLIC);
+//        out.setReturnType(method.getReturnType());
+//        out.setName(method.getName());
+//        for(Parameter parameter : method.getParameters())
+//        {
+//            out.addParameter(parameter); //$NON-NLS-1$    
+//        }
+//        
+//        return out;  
+//    }
 
     public void addMapperAnnotations(Interface interfaze, Method method) {
         return;

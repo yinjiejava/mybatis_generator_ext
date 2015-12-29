@@ -314,12 +314,15 @@ public class MyBatisGenerator {
         File extFile = new File(fileName);
         
         //2. 构造目标内容
-        //1) 修改类名
-        int mapperIndex = source.indexOf("Mapper");
-        String targetSource = source.substring(0, mapperIndex + 6) + "Ext extends %s {\n\r}";
+        //1)删除导入
+        String targetSource = delImport(source);
+        
+        //2) 修改类名
+        int mapperIndex = targetSource.indexOf("Mapper");
+        targetSource = targetSource.substring(0, mapperIndex + 6) + "Ext extends %s {\n\r}";
         targetSource = String.format(targetSource, sourceTargetFile.getName().replace(".java", ""));
         
-        //2) 添加注解
+        //3) 添加注解
         String annotationStr = "import javax.annotation.Resource; \n\r\n\r";
         annotationStr += "@Resource \n\r";
         annotationStr += "public interface";
@@ -327,6 +330,37 @@ public class MyBatisGenerator {
         
         writeFile(extFile, targetSource);
 	}
+	
+	private String delImport(String str)
+	{
+	    StringBuilder sb1 = new StringBuilder();
+	    StringBuilder sb2 = new StringBuilder();
+	    
+	    int index = str.indexOf(";") + 1;
+	    sb1.append(str.substring(0, index));
+	    sb2.append(str.substring(index));
+	    
+	    String tempStr = sb2.toString();
+	    int startIndex = tempStr.indexOf("import");
+        while (startIndex >= 0)
+        {
+            delImportCore(sb2);
+            
+            tempStr = sb2.toString();
+            startIndex = tempStr.indexOf("import");
+        }
+	    
+	    sb1.append(sb2);
+	    return sb1.toString();
+	}
+	
+	private void delImportCore(StringBuilder sb2)
+    {
+	    int endIndex = sb2.indexOf(";") + 1;
+	    String tempStr = sb2.toString();
+        sb2.setLength(0);
+        sb2.append(tempStr.substring(endIndex));
+    }
 	
 	private void generatedXmlExtFile(String source, File sourceTargetFile) throws IOException
     {
